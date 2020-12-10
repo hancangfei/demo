@@ -161,9 +161,9 @@ class HostAdmin(object):
 
 @xadmin.sites.register(DocSuggestionUnstructure)
 class DocSuggestionAdmin(object):
-    list_display = ("Doc_ID", "Doc_Title", "Doc_Receiver", "create_time")
+    list_display = ("Doc_ID", "Doc_Title", "Doc_Sender", "create_time")
     list_display_link = {"Doc_ID", "Doc_Title"}
-    search_fields = ["Doc_ID", "DocTitle"]
+    search_fields = ["Doc_ID", "Doc_Title"]
     style_fields = {"hosts": "checkbox-inline"}
 
 
