@@ -1,2 +1,2 @@
 # demo
-django+xadmin
+just a test
