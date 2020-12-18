@@ -16,7 +16,9 @@ PROJECT_ROOT = os.path.join(
     os.path.realpath(os.path.dirname(__file__)), os.pardir)
 # PROJECT_ROOT  = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps')) # 把extra_apps文件夹添加到搜索目录中
+
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
+sys.path.insert(1, os.path.join(BASE_DIR, 'extra_apps'))# 把extra_apps文件夹添加到搜索目录中
 
 DEBUG = True
 
@@ -45,7 +47,7 @@ ALLOWED_HOSTS = ['*']
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
 #TIME_ZONE = 'America/Chicago'
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -161,6 +163,9 @@ INSTALLED_APPS = [
     'reversion',
 
     'app',
+    'cases',
+    'organization',
+    'wenshu',
 ]
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
